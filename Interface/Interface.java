@@ -7,7 +7,7 @@ package Interface;
 //Single Abstract Method Interface --> SAM Interface --> Interface Contains only one abstract method 
 // SAM interface also called as Funtional interface --> java 8, Lambda Expression
 
-interface Ridable{  // instance variables are not allowed.
+interface Readable{  // instance variables are not allowed.
     // cannot be instanciated - no constructors
     // an interface can extend anothe interface/interfaces
     int MAX_SPEED = 90; //variables are implicitly public,final,static
@@ -16,7 +16,7 @@ interface Ridable{  // instance variables are not allowed.
         System.out.println("Hello form Ridable interface");
     }
 }
-class Car implements Ridable{
+class Car implements Readable{
     public void ride(){  // must define all the methods present in the interface,if not we can change the class to abstarct.
         System.out.println("You are riding a car");
     }
@@ -25,14 +25,14 @@ class Car implements Ridable{
     }
 }
 
-class Bike implements Ridable{  //can implement an infinite number of interfaces
+class Bike implements Readable{  //can implement an infinite number of interfaces
     public void ride(){
         System.out.println("You are riding a bike");
     }
 }
 
 class Mechanic{
-    void check(Ridable r){
+    void check(Readable r){
         System.out.println("Checking");
         r.ride();  // Dynamic Binding
     }
@@ -40,7 +40,7 @@ class Mechanic{
 public class Interface {
     public static void main(String[] args) {
         // can not create object for interface, can store reference
-        Ridable r = new Car();
+        Readable r = new Car();
         r.display();
         Mechanic m = new Mechanic();
         Car c = new Car();
@@ -48,7 +48,7 @@ public class Interface {
         m.check(c);
         m.check(b);
 
-        Ridable r2 = new Ridable() {  // anonymous class for interface obj
+        Readable r2 = new Readable() {  // anonymous class for interface obj
             public void ride(){
                 System.out.println("Im riding a vintage car");
             }
@@ -56,13 +56,8 @@ public class Interface {
         r2.ride();
         
         // Lambda Expression - Functional Interface
-        Ridable r3 = () ->  System.out.println("Im riding a electric car");  // overriding the one and only abstract method in functional interface.
+        Readable r3 = () ->  System.out.println("Im riding a electric car");  // overriding the one and only abstract method in functional interface.
         r3.ride();
-            
-                
-            
-    
-        
     }
     
 }
