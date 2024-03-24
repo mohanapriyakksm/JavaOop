@@ -8,6 +8,7 @@ public class Reflection {
         Employee e = new Employee("Diya",30000);  // we can create object for emp cls because that cls is present in the same package
         @SuppressWarnings("rawtypes")
         Class cls = e.getClass();  // reflection method for class for accessing class information
+        //System.out.println(cls);
         System.out.println("Class name is : "+cls.getName());  // using the Class obj to get the name of the class --> Inheritance.Employee --> PackageName.ClassName
 
         Method[] methods = cls.getMethods();
@@ -17,14 +18,18 @@ public class Reflection {
         }
 
         try {
-            System.out.println(methods[0].invoke(e,null));
+            System.out.println(methods[0].invoke(e));
         } catch (IllegalAccessException | InvocationTargetException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
 
+        System.out.println(Reflection.class);
+        
         
 
     }
     
 }
+
+// we can invoke methods at runtime irrespective of the access specifier used with them.

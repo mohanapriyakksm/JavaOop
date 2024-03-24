@@ -1,6 +1,6 @@
 package ObjectClass;
 
-
+//equals(Object obj)
 // every class is an object class [public class clsname extends Object] Object --> cosmic super class
 public class ObjectClass extends Object{
     public static void main(String[] args) {

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrayListDemo",
+            "request": "launch",
+            "mainClass": "Array.ArrayListDemo",
+            "projectName": "OOP_665123bb"
+        },
+        {
+            "type": "java",
+            "name": "ArrDemo",
+            "request": "launch",
+            "mainClass": "Array.ArrDemo",
+            "projectName": "OOP_665123bb"
+        },
+        {
+            "type": "java",
+            "name": "ObjectCloning",
+            "request": "launch",
+            "mainClass": "ObjectCloning.ObjectCloning",
+            "projectName": "OOP_665123bb"
+        },
+        {
+            "type": "java",
             "name": "AnonymousClass",
             "request": "launch",
             "mainClass": "AnonymousClass.AnonymousClass",

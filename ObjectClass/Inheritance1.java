@@ -19,6 +19,7 @@ class Employee extends Object{ // base class, Super class, Parent class
 	public double getSalary(){return salary;}
 	public void setSalary(double s){salary =s;}
 
+	//Overriding equals() method
     public boolean equals(Object obj){
         if(this==obj) return true;
         if(obj==null) return false;
