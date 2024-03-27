@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MultiDimentionalArray",
+            "request": "launch",
+            "mainClass": "Array.MultiDimentionalArray",
+            "projectName": "OOP_665123bb"
+        },
+        {
+            "type": "java",
+            "name": "MatrixSearch",
+            "request": "launch",
+            "mainClass": "Array.MatrixSearch",
+            "projectName": "OOP_665123bb"
+        },
+        {
+            "type": "java",
             "name": "ArrayListDemo",
             "request": "launch",
             "mainClass": "Array.ArrayListDemo",

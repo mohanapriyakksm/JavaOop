@@ -35,6 +35,7 @@ public class MultiDimentionalArray {
             {4,5},
             {6,7,8}
         };
+       
         for(int[] a:arr2d){
             System.out.println(Arrays.toString(a));
             }
